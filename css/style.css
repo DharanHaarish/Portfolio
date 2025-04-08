@@ -13,6 +13,57 @@
     --glow-color: rgba(0, 255, 255, 0.1);
 }
 
+/* Base styles */
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+main {
+    flex: 1 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Section Spacing */
+.about-content {
+    padding: 2rem 0;
+}
+
+.milestones-section {
+    margin-top: 3rem;
+}
+
+.current-reading-section {
+    margin-top: 3rem;
+}
+
+/* Footer */
+.footer {
+    flex-shrink: 0;
+    background-color: var(--bg-secondary);
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
 /* Logo Container */
 .navbar {
     position: relative;
@@ -246,25 +297,6 @@
     }
 }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bg-primary);
-    background-image: 
-        linear-gradient(0deg, rgba(0, 18, 51, 0.9) 0%, rgba(0, 8, 25, 0.9) 100%),
-        linear-gradient(90deg, var(--glow-color) 1px, transparent 1px),
-        linear-gradient(0deg, var(--glow-color) 1px, transparent 1px),
-        radial-gradient(circle at 50% 50%, var(--glow-color) 0%, transparent 50%);
-    background-size: 100% 100%, 50px 50px, 50px 50px, 100% 100%;
-    background-position: 0 0;
-    color: var(--text-primary);
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
 body::before {
     content: '';
     position: fixed;
@@ -294,14 +326,6 @@ body::before {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     color: var(--text-primary);
-}
-
-main {
-    flex: 1;
-    position: relative;
-    z-index: 1;
-    overflow-y: auto;
-    padding-bottom: 2rem;
 }
 
 .container.mt-4 {
@@ -344,11 +368,6 @@ main {
 .card-text {
     color: var(--text-secondary);
     line-height: 1.6;
-}
-
-.footer {
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-secondary);
 }
 
 .timeline .card {
@@ -414,10 +433,6 @@ main {
 }
 
 /* About Page Styles */
-.about-content {
-    padding: 2rem 0;
-}
-
 .about-content h1 {
     color: var(--accent-color);
     font-weight: 600;
@@ -481,10 +496,6 @@ main {
 }
 
 /* Milestones Section */
-.milestones-section {
-    margin-top: 3rem;
-}
-
 .section-title {
     color: var(--accent-color);
     font-family: 'Courgette', cursive;
@@ -664,10 +675,6 @@ main {
 }
 
 /* Current Reading Section */
-.current-reading-section {
-    margin-top: 1.5rem;
-}
-
 .reading-block {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
