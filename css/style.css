@@ -50,35 +50,21 @@
     position: absolute;
     top: -5px;
     left: calc(100% + 15px);
-    padding: 0.8rem 1.8rem;
-    background-color: var(--bg-secondary);
-    border: 2px solid var(--border-color);
+    padding: 0.8rem;
     font-family: 'Dancing Script', cursive;
     font-size: 1.2rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--accent-color);
     white-space: pre-line;
     z-index: 1000;
-    width: 335px;
+    width: 410px;
     text-align: left;
     line-height: 1;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 25px 25px 25px 5px;
-    transform-origin: left center;
 }
 
+/* Remove the tooltip arrow since we don't have a box anymore */
 .typewriter-tooltip::before {
-    content: '';
-    position: absolute;
-    left: -12px;
-    top: 15px;
-    width: 20px;
-    height: 20px;
-    background-color: var(--bg-secondary);
-    border: 2px solid var(--border-color);
-    border-right: none;
-    border-top: none;
-    transform: rotate(45deg);
+    display: none;
 }
 
 .navbar-brand:hover .typewriter-tooltip {
@@ -92,6 +78,7 @@
     white-space: nowrap;
     width: 0;
     margin-bottom: 0.2rem;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
 }
 
 .navbar-brand:hover .typewriter-tooltip span {
@@ -150,18 +137,12 @@
 
 @media (max-width: 992px) {
     .typewriter-tooltip {
-        width: 280px;
+        width: 350px;
         left: 50%;
         top: calc(100% + 15px);
         transform: translateX(-50%);
-        border-radius: 20px;
         font-size: 1rem;
-    }
-
-    .typewriter-tooltip::before {
-        left: calc(50% - 10px);
-        top: -10px;
-        transform: rotate(135deg);
+        text-align: center;
     }
 
     .navbar-brand:hover .typewriter-tooltip {
@@ -193,8 +174,7 @@
     }
 
     .typewriter-tooltip {
-        width: 250px;
-        padding: 0.6rem 1.2rem;
+        width: 300px;
         font-size: 0.9rem;
     }
 
@@ -219,9 +199,8 @@
     }
 
     .typewriter-tooltip {
-        width: 220px;
+        width: 260px;
         font-size: 0.85rem;
-        padding: 0.5rem 1rem;
     }
 
     .nav-link {
@@ -300,6 +279,11 @@ main {
     flex: 1;
     position: relative;
     z-index: 1;
+    margin-top: 3rem;
+}
+
+.container.mt-4 {
+    margin-top: 3rem !important;
 }
 
 .navbar {
@@ -401,4 +385,14 @@ main {
     to {
         opacity: 1;
     }
+}
+
+.col-md-8.offset-md-2 {
+    margin-top: 5rem;
+}
+
+main {
+    flex: 1;
+    position: relative;
+    z-index: 1;
 } 
