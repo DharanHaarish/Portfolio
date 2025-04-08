@@ -14,25 +14,61 @@
 }
 
 /* Base styles */
-html, body {
-    min-height: 100%;
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
-    position: relative;
-}
 
-body {
     overflow-y: auto;
-    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 main {
-    min-height: calc(100vh - 180px);
+    flex: 1 0 auto;
+
     position: relative;
     z-index: 1;
 }
+
+fix-layout
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Section Spacing */
+.about-content {
+    padding: 2rem 0;
+}
+
+.milestones-section {
+    margin-top: 3rem;
+}
+
+.current-reading-section {
+    margin-top: 3rem;
+}
+
+/* Footer */
+.footer {
+    flex-shrink: 0;
+    background-color: var(--bg-secondary);
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
 
 /* Logo Container */
 .navbar {
@@ -340,11 +376,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
 }
 
-.footer {
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-secondary);
-}
-
 .timeline .card {
     border-left: 4px solid var(--accent-color);
 }
@@ -408,10 +439,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* About Page Styles */
-.about-content {
-    padding: 2rem 0;
-}
-
 .about-content h1 {
     color: var(--accent-color);
     font-weight: 600;
@@ -475,10 +502,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Milestones Section */
-.milestones-section {
-    margin-top: 3rem;
-    position: relative;
-}
+fix-layout
 
 .section-title {
     color: var(--accent-color);
@@ -659,10 +683,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Current Reading Section */
-.current-reading-section {
-    margin-top: 3rem;
-    position: relative;
-}
 
 .reading-block {
     background: var(--card-bg);
