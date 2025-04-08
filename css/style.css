@@ -1,36 +1,323 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Source+Code+Pro:wght@400&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+/* Dark mode colors */
+:root {
+    --bg-primary: #000819;
+    --bg-secondary: #001233;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent-color: #64ffda;
+    --card-bg: rgba(0, 18, 51, 0.7);
+    --border-color: #0a2472;
+    --glow-color: rgba(0, 255, 255, 0.1);
+}
+
+/* Logo Container */
+.navbar {
+    position: relative;
+    overflow: visible;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+/* Logo Styling */
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 2.5rem !important;
+    color: var(--accent-color) !important;
+    letter-spacing: 1px;
+    padding: 0 8px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar-brand:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-2px);
+    text-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
+}
+
+/* Cloud-like tooltip */
+.typewriter-tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: -5px;
+    left: calc(100% + 15px);
+    padding: 0.8rem 1.8rem;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    white-space: pre-line;
+    z-index: 1000;
+    width: 335px;
+    text-align: left;
+    line-height: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 25px 25px 25px 5px;
+    transform-origin: left center;
+}
+
+.typewriter-tooltip::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-right: none;
+    border-top: none;
+    transform: rotate(45deg);
+}
+
+.navbar-brand:hover .typewriter-tooltip {
+    visibility: visible;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.typewriter-tooltip span {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    margin-bottom: 0.2rem;
+}
+
+.navbar-brand:hover .typewriter-tooltip span {
+    animation: typing 2s steps(80, end) forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.navbar-brand:hover .typewriter-tooltip span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.navbar-brand:hover .typewriter-tooltip span:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.navbar-brand:hover .typewriter-tooltip span:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.navbar-brand:hover .typewriter-tooltip span:nth-child(4) {
+    animation-delay: 6s;
+}
+
+/* Typewriter animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive adjustments for tooltip */
+@media (max-width: 992px) {
+    .typewriter-tooltip {
+        width: 320px;
+        left: 50%;
+        top: calc(100% + 15px);
+        transform: translateX(-50%);
+        border-radius: 20px;
+    }
+
+    .typewriter-tooltip::before {
+        left: calc(50% - 10px);
+        top: -10px;
+        transform: rotate(135deg);
+    }
+
+    .navbar-brand:hover .typewriter-tooltip {
+        transform: translateX(-50%);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+}
+
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-primary);
+    background-image: 
+        linear-gradient(0deg, rgba(0, 18, 51, 0.9) 0%, rgba(0, 8, 25, 0.9) 100%),
+        linear-gradient(90deg, var(--glow-color) 1px, transparent 1px),
+        linear-gradient(0deg, var(--glow-color) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, var(--glow-color) 0%, transparent 50%);
+    background-size: 100% 100%, 50px 50px, 50px 50px, 100% 100%;
+    background-position: 0 0;
+    color: var(--text-primary);
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 60%, rgba(0, 255, 255, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+    animation: glow 10s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-primary);
 }
 
 main {
     flex: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    padding: 1rem 0;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    transition: color 0.3s ease;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: 'Dancing Script', cursive;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-color) !important;
 }
 
 .card {
-    transition: transform 0.2s;
-    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    background-color: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: var(--accent-color);
+}
+
+.card-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 .footer {
-    margin-top: auto;
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-secondary);
 }
 
 .timeline .card {
-    border-left: 4px solid #007bff;
+    border-left: 4px solid var(--accent-color);
 }
 
-.btn-group .btn {
-    margin-right: 5px;
+.btn-outline-primary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+}
+
+.btn-outline-secondary {
+    color: var(--text-secondary);
+    border-color: var(--text-secondary);
+}
+
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.list-unstyled li::before {
+    content: '✓';
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+/* Skill tags */
+.skill-tag {
+    background-color: var(--bg-secondary);
+    color: var(--accent-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0.2rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
 }
 
 /* Responsive adjustments */
@@ -44,6 +331,19 @@ main {
     }
     
     .navbar-brand {
-        font-size: 1.2rem;
+        font-size: 2rem !important;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 } 
