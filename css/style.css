@@ -1382,4 +1382,189 @@ h1, h2, h3, h4, h5, h6 {
     .intro {
         font-size: 1.6rem;
     }
+}
+
+/* Project Cards */
+.project-card {
+    transition: all 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.project-card .card-title {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card .card-text {
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-card.expanded {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    top: unset;
+    left: unset;
+    transform: none;
+    z-index: 2;
+    height: auto;
+    min-height: 350px;
+    max-height: none;
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 8px 32px rgba(0, 255, 255, 0.15);
+    transition: all 0.4s cubic-bezier(.4,2,.6,1);
+}
+
+.project-card.expanded::before {
+    display: none !important;
+}
+
+.project-card.expanded .card-details {
+    display: block;
+    max-height: none;
+    overflow-y: visible;
+    position: relative;
+    z-index: 1;
+}
+
+.project-card.expanded .card-title {
+    color: var(--accent-color) !important;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-card.expanded .card-text {
+    color: var(--text-primary) !important;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.project-card.expanded .tools-section,
+.project-card.expanded .skills-section {
+    margin-bottom: 2rem;
+}
+
+.project-card.expanded .tools-title,
+.project-card.expanded .skills-title {
+    color: var(--accent-color) !important;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-card .skill-tag {
+    background-color: var(--bg-primary);
+    color: var(--accent-color);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0.3rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.project-card .skill-tag:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+.project-card.expanded .card-preview {
+    display: none;
+}
+
+.project-card .card-preview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .preview-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-primary) !important;
+}
+
+.project-card .show-more-btn,
+.project-card .show-less-btn {
+    color: var(--accent-color);
+    padding: 0;
+    margin-top: auto;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+}
+
+.project-card .show-more-btn:hover,
+.project-card .show-less-btn:hover {
+    color: var(--text-primary);
+}
+
+.project-card .card-details {
+    display: none;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Custom scrollbar for card details */
+.project-card .card-details::-webkit-scrollbar {
+    width: 8px;
+}
+
+.project-card .card-details::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+.project-card .card-details::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+.project-card.expanded .card-preview {
+    display: none;
+}
+
+.project-card.expanded .card-details {
+    display: block;
+    max-height: calc(90vh - 4rem);
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- FORCE PROJECT CARD TEXT COLOR AT THE END OF FILE --- */
+.project-card .card-text,
+.project-card.expanded .card-text,
+.project-card.expanded .card-details,
+.project-card.expanded .card-details *,
+.project-card.expanded .card-details h1,
+.project-card.expanded .card-details h2,
+.project-card.expanded .card-details h3,
+.project-card.expanded .card-details h4,
+.project-card.expanded .card-details h5,
+.project-card.expanded .card-details h6,
+.project-card.expanded .card-details p,
+.project-card.expanded .card-details span,
+.project-card.expanded .card-details li {
+    color: #fff !important;
 } 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -40,54 +41,231 @@
 
     <main class="container mt-4">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-10 offset-md-1">
                 <p class="projects-intro">
                     Over the years, I have worked on lots of small projects and data consultation for startups, but these are the projects I am most proud of.
                 </p>
                 
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Project 1</h5>
-                                <p class="card-text">
-                                    A web application built with Flask and Python, featuring user authentication
-                                    and database integration.
-                                </p>
-                                <div class="mt-3 mb-3">
-                                    <span class="skill-tag">Python</span>
-                                    <span class="skill-tag">Flask</span>
-                                    <span class="skill-tag">SQL</span>
+                <!-- LIFT Projects Section -->
+                <section class="mb-5">
+                    <h2 class="section-title mb-4">
+                        <i class="fas fa-building"></i>
+                        LIFT
+                    </h2>
+                    <p class="section-description mb-4">
+                        LIFT is a powerful Partnership Performance Analytics SaaS platform designed to streamline program management and accelerate growth within the marketing industry. In a world where marketing data can often be overwhelming and fragmented, LIFT simplifies the complexity—turning raw data into clear, actionable insights that drive smarter decisions, optimize partner performance, and fuel measurable results.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 project-card">
+                                <div class="card-body">
+                                    <div class="card-preview">
+                                        <h5 class="card-title">Revenue Projection</h5>
+                                        <p class="card-text preview-text">
+                                            Built a predictive analytics tool using FB-Prophet to forecast client revenue trends...
+                                        </p>
+                                        <button class="btn btn-link show-more-btn">
+                                            Show More <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-details" style="display: none;">
+                                        <h5 class="card-title">Revenue Projection</h5>
+                                        <p class="card-text">
+                                            Built a predictive analytics tool using FB-Prophet to forecast client revenue trends. Integrated statistical techniques and iterative testing on historical data to enhance model accuracy. The tool offers clients clear, data-driven projections and actionable insights, helping them estimate future performance and identify opportunities for growth.
+                                        </p>
+                                        <div class="tools-section mt-3">
+                                            <h6 class="tools-title"><i class="fas fa-wrench"></i> Tools and Technologies</h6>
+                                            <div class="mt-2 mb-3">
+                                                <span class="skill-tag">FB Prophet</span>
+                                                <span class="skill-tag">Python</span>
+                                                <span class="skill-tag">BigQuery</span>
+                                                <span class="skill-tag">SQL</span>
+                                                <span class="skill-tag">Looker Studio</span>
+                                            </div>
+                                        </div>
+                                        <div class="skills-section">
+                                            <h6 class="skills-title"><i class="fas fa-chart-line"></i> Skills Demonstrated</h6>
+                                            <div class="mt-2 mb-3">
+                                                <span class="skill-tag">Time Series Forecasting</span>
+                                                <span class="skill-tag">Statistical Modeling</span>
+                                                <span class="skill-tag">Data Cleaning</span>
+                                                <span class="skill-tag">Model Evaluation</span>
+                                                <span class="skill-tag">Business Insight Generation</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-link show-less-btn">
+                                            Show Less <i class="fas fa-chevron-up"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="d-flex gap-2">
-                                    <a href="#" class="btn btn-outline-primary">View Demo</a>
-                                    <a href="#" class="btn btn-outline-secondary">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 project-card">
+                                <div class="card-body">
+                                    <div class="card-preview">
+                                        <h5 class="card-title">Watchdog for BigQuery</h5>
+                                        <p class="card-text preview-text">
+                                            Designed and deployed an automated Data Quality Assurance (QA) alert system to monitor inconsistencies...
+                                        </p>
+                                        <button class="btn btn-link show-more-btn">
+                                            Show More <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-details" style="display: none;">
+                                        <h5 class="card-title">Watchdog for BigQuery</h5>
+                                        <p class="card-text">
+                                            Designed and deployed an automated Data Quality Assurance (QA) alert system to monitor inconsistencies across BigQuery datasets. Developed custom QA rules to validate data integrity, built scheduled queries to check for anomalies, and integrated Slack notifications to alert the team in real-time when critical conditions fail. This system significantly reduced manual data checks and ensured reliable downstream analytics.
+                                        </p>
+                                        <div class="tools-section mt-3">
+                                            <h6 class="tools-title"><i class="fas fa-wrench"></i> Tools and Technologies</h6>
+                                            <div class="mt-2 mb-3">
+                                                <span class="skill-tag">BigQuery</span>
+                                                <span class="skill-tag">SQL</span>
+                                                <span class="skill-tag">Python</span>
+                                                <span class="skill-tag">Slack API</span>
+                                            </div>
+                                        </div>
+                                        <div class="skills-section">
+                                            <h6 class="skills-title"><i class="fas fa-chart-line"></i> Skills Demonstrated</h6>
+                                            <div class="mt-2 mb-3">
+                                                <span class="skill-tag">Cross-functional Communication</span>
+                                                <span class="skill-tag">Automation & Scheduling</span>
+                                                <span class="skill-tag">Anomaly Detection</span>
+                                                <span class="skill-tag">SQL Query Optimization</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-link show-less-btn">
+                                            Show Less <i class="fas fa-chevron-up"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 project-card">
+                                <div class="card-body">
+                                    <div class="card-preview">
+                                        <h5 class="card-title">Data Pipeline Orchestration</h5>
+                                        <p class="card-text preview-text">
+                                            Developed and deployed a workflow automation system using Apache Airflow to trigger scheduled queries...
+                                        </p>
+                                        <button class="btn btn-link show-more-btn">
+                                            Show More <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-details" style="display: none;">
+                                        <h5 class="card-title">Data Pipeline Orchestration</h5>
+                                        <p class="card-text">
+                                            Developed and deployed a workflow automation system using Apache Airflow to trigger scheduled queries in a specific execution order for populating Network and Google Analytics (GA) datasets. The solution ensured data freshness and dependency resolution, supporting downstream dashboards and analytics tools. Included custom Python scripts for dynamic DAG generation and error handling, allowing seamless scaling and maintenance of complex data pipelines.
+                                        </p>
+                                        <div class="tools-section mt-3">
+                                            <h6 class="tools-title"><i class="fas fa-wrench"></i> Tools and Technologies</h6>
+                                            <div class="mt-2 mb-3">
+                                                <span class="skill-tag">Apache Airflow</span>
+                                                <span class="skill-tag">Python</span>
+                                                <span class="skill-tag">BigQuery</span>
+                                                <span class="skill-tag">SQL</span>
+                                                <span class="skill-tag">Google Cloud</span>
+                                            </div>
+                                        </div>
+                                        <div class="skills-section">
+                                            <h6 class="skills-title"><i class="fas fa-chart-line"></i> Skills Demonstrated</h6>
+                                            <div class="mt-2 mb-3">
+                                                <span class="skill-tag">Workflow Orchestration</span>
+                                                <span class="skill-tag">Python Scripting</span>
+                                                <span class="skill-tag">Dependency Management</span>
+                                                <span class="skill-tag">Data Engineering</span>
+                                                <span class="skill-tag">Automation</span>
+                                                <span class="skill-tag">Scalable Architecture</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-link show-less-btn">
+                                            Show Less <i class="fas fa-chevron-up"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 project-card">
+                                <div class="card-body">
+                                    <div class="card-preview">
+                                        <h5 class="card-title">Marketing Dashboards</h5>
+                                        <p class="card-text preview-text">
+                                            Built and maintained multiple interactive dashboards to analyze cross-platform performance metrics...
+                                        </p>
+                                        <button class="btn btn-link show-more-btn">
+                                            Show More <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-details" style="display: none;">
+                                        <h5 class="card-title">Marketing Dashboards</h5>
+                                        <p class="card-text">
+                                            Built and maintained multiple interactive dashboards to analyze cross-platform performance metrics, Google Analytics data, and benchmark comparisons using Looker Studio and BigQuery. These dashboards provided stakeholders with real-time visual insights into campaign effectiveness, user engagement, and marketing ROI across channels. Designed to support data-driven decision making, the tools helped identify optimization opportunities and improve strategic alignment across teams.
+                                        </p>
+                                        <div class="tools-section mt-3">
+                                            <h6 class="tools-title"><i class="fas fa-wrench"></i> Tools and Technologies</h6>
+                                            <div class="mt-2 mb-3">
+                                                <span class="skill-tag">Looker Studio</span>
+                                                <span class="skill-tag">BigQuery</span>
+                                                <span class="skill-tag">SQL</span>
+                                                <span class="skill-tag">Google Analytics</span>
+                                            </div>
+                                        </div>
+                                        <div class="skills-section">
+                                            <h6 class="skills-title"><i class="fas fa-chart-line"></i> Skills Demonstrated</h6>
+                                            <div class="mt-2 mb-3">
+                                                <span class="skill-tag">Data Visualization</span>
+                                                <span class="skill-tag">Dashboard Design</span>
+                                                <span class="skill-tag">Stakeholder Reporting</span>
+                                                <span class="skill-tag">Cross-Channel Attribution</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-link show-less-btn">
+                                            Show Less <i class="fas fa-chevron-up"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Project 2</h5>
-                                <p class="card-text">
-                                    An API service that provides data processing and analysis capabilities
-                                    using Python and REST principles.
-                                </p>
-                                <div class="mt-3 mb-3">
-                                    <span class="skill-tag">Python</span>
-                                    <span class="skill-tag">REST API</span>
-                                    <span class="skill-tag">Data Analysis</span>
-                                </div>
-                                <div class="d-flex gap-2">
-                                    <a href="#" class="btn btn-outline-primary">View Demo</a>
-                                    <a href="#" class="btn btn-outline-secondary">GitHub</a>
+                <!-- Personal Projects Section -->
+                <section>
+                    <div class="d-flex justify-content-end align-items-center mb-2">
+                        <a href="https://newengen.com/technology" target="_blank" style="color:var(--accent-color); text-decoration:underline; font-size:1.1rem; font-weight:500;">Official Website</a>
+                    </div>
+                    <h2 class="section-title mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                        Personal
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Project Title</h5>
+                                    <p class="card-text">
+                                        Project description goes here. Highlight the key features and technologies used.
+                                    </p>
+                                    <div class="mt-3 mb-3">
+                                        <span class="skill-tag">Technology 1</span>
+                                        <span class="skill-tag">Technology 2</span>
+                                        <span class="skill-tag">Technology 3</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-outline-primary">View Demo</a>
+                                        <a href="#" class="btn btn-outline-secondary">GitHub</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Add more personal project cards as needed -->
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </main>
@@ -99,5 +277,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 </html> 
