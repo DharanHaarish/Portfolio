@@ -1,4 +1,5 @@
 /* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Newsreader:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Source+Code+Pro:wght@400&family=Dancing+Script:wght@400;500;600;700&family=Courgette:wght@400&display=swap');
 
 /* Dark mode colors */
@@ -25,7 +26,7 @@ body {
 
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
     overflow-x: hidden;
 
     overflow-y: auto;
@@ -335,7 +336,7 @@ body::before {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Newsreader', serif;
     color: var(--text-primary);
 }
 
@@ -352,7 +353,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: color 0.3s ease;
     font-size: 1.8rem;
     font-weight: 500;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Karla', sans-serif;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -379,6 +380,7 @@ h1, h2, h3, h4, h5, h6 {
 .card-text {
     color: var(--text-secondary);
     line-height: 1.6;
+    font-family: 'Karla', sans-serif;
 }
 
 .timeline .card {
@@ -403,6 +405,7 @@ h1, h2, h3, h4, h5, h6 {
 .list-unstyled li {
     margin-bottom: 0.5rem;
     color: var(--text-secondary);
+    font-family: 'Karla', sans-serif;
 }
 
 .list-unstyled li::before {
@@ -422,6 +425,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    font-family: 'Karla', sans-serif;
 }
 
 .skill-tag:hover {
@@ -456,7 +460,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
     line-height: 1.8;
     color: var(--text-secondary);
-    font-family: 'Courgette', cursive;
+    font-family: 'Karla', sans-serif;
     margin-bottom: 1.5rem;
 }
 
@@ -487,6 +491,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    font-family: 'Karla', sans-serif;
 }
 
 .skill-tag:hover {
@@ -499,15 +504,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Override font for milestone and reading sections */
 .milestones-section p,
 .current-reading-section p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
 }
 
 .milestone-block p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
 }
 
 .reading-block p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
 }
 
 /* Center alignment for sections */
@@ -589,7 +594,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .milestone-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 0.25rem;
     color: var(--accent-color);
@@ -602,7 +607,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
 }
 
 .milestone-block .btn {
@@ -758,7 +763,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .book-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 0.25rem;
     color: var(--accent-color);
@@ -770,7 +775,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-color);
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
     opacity: 0.9;
 }
 
@@ -779,7 +784,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
     line-height: 1.8;
     font-size: 1.1rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
 }
 
 .btn-outline-primary {
@@ -1153,7 +1158,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-subtitle {
     color: var(--accent-color);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -1186,7 +1191,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .book-chip .book-name {
     color: var(--text-primary);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 0.3rem;
@@ -1194,7 +1199,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .book-chip .book-author {
     color: var(--text-secondary);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 0.8rem;
 }
 
@@ -1326,7 +1331,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Projects page intro text */
 .projects-intro {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Karla', sans-serif;
     font-size: 1.8rem;
     line-height: 1.6;
     color: var(--text-primary);
@@ -1342,6 +1347,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 12rem;
     margin-bottom: 0.75rem;  /* Reduced from 1.5rem to 0.75rem */
     max-width: 800px;
+    font-family: 'Karla', sans-serif;
 }
 
 .greeting {
@@ -1355,7 +1361,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Karla', sans-serif;
     font-size: 2rem;
     line-height: 1.6;
     color: var(--text-primary);  /* Changed from text-secondary to text-primary for white color */
@@ -1404,6 +1410,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    font-family: 'Karla', sans-serif;
 }
 
 .project-card.expanded {
@@ -1446,6 +1453,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 2rem;
+    font-family: 'Karla', sans-serif;
 }
 
 .project-card.expanded .tools-section,
@@ -1473,6 +1481,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
     border: 1px solid var(--accent-color);
     transition: all 0.3s ease;
+    font-family: 'Karla', sans-serif;
 }
 
 .project-card .skill-tag:hover {
@@ -1498,6 +1507,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--text-primary) !important;
+    font-family: 'Karla', sans-serif;
 }
 
 .project-card .show-more-btn,
@@ -1513,6 +1523,7 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     background: none;
     font-size: 1rem;
+    font-family: 'Karla', sans-serif;
 }
 
 .project-card .show-more-btn:hover,
